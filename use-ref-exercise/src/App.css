@@ -1,0 +1,274 @@
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+/* Header */
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.subtitle {
+    color: #7c3aed;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.header h1 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #252238;
+    letter-spacing: -1.5px;
+    margin: 14px 0 8px;
+}
+
+.header p {
+    color: #858196;
+    font-size: 16px;
+}
+
+/* Layout */
+
+.exercises-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Exercise Cards */
+
+.exercise-card {
+    background: white;
+    padding: 28px;
+    border-radius: 22px;
+    border: 1px solid #eae7f2;
+    box-shadow: 0 6px 24px rgba(37, 34, 56, 0.04);
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    transition: 0.25s;
+}
+
+.exercise-card:hover {
+    box-shadow: 0 10px 32px rgba(37, 34, 56, 0.08);
+    transform: translateY(-3px);
+}
+
+.exercise-number {
+    color: #7c3aed;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.exercise-card h2 {
+    color: #252238;
+    font-size: 23px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.exercise-card p {
+    font-size: 14px;
+    color: #858196;
+    margin: 0 0 6px;
+}
+
+/* Inputs */
+
+input {
+    width: 100%;
+    padding: 14px 16px;
+    background: #faf9fc;
+    border: 1px solid #dedbe8;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #252238;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 4px #ede9fe;
+}
+
+/* Buttons */
+
+button {
+    width: 100%;
+    padding: 13px 18px;
+    background: #7c3aed;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #6d28d9;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+.secondary-button {
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+.secondary-button:hover {
+    background: #ddd6fe;
+}
+
+/* Counter */
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.counter-values {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.counter-current,
+.counter-previous {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 18px;
+    border-radius: 16px;
+}
+
+.counter-current {
+    background: #f3efff;
+    color: #7c3aed;
+}
+
+.counter-previous {
+    background: #f7f7fa;
+    color: #858196;
+}
+
+.counter-values span {
+    font-size: 13px;
+}
+
+.counter-values strong {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.counter-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 13px;
+    color: #858196;
+    letter-spacing: 2px;
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+    .exercises-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    .container {
+        padding: 24px 16px;
+    }
+
+    .exercise-card {
+        padding: 22px;
+    }
+}
+/* Timer Design */
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.timer h2 {
+    font-size: 23px;
+    color: #252238;
+    font-weight: 700;
+    margin: 0;
+}
+
+.timer p {
+    font-size: 14px;
+    color: #858196;
+    margin: 0;
+}
+
+.timer-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f3efff;
+    color: #7c3aed;
+    border-radius: 16px;
+    padding: 20px;
+    gap: 8px;
+}
+
+.timer-display span {
+    font-size: 13px;
+}
+
+.timer-display strong {
+    font-size: 48px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.timer-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.timer-buttons button {
+    margin: 0;
+    width: 100%;
+}
+
+.timer-buttons .secondary-button {
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+.timer-buttons .secondary-button:hover {
+    background: #ddd6fe;
+}
